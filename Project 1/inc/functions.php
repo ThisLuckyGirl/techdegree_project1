@@ -1,11 +1,9 @@
 <?php
 
-// PHP - Random Quote Generator
+// PHP - Random Quote Generator by Christina Lopez
 
-// Create the Multidimensional array of quote elements and name it quotes
-// Each inner array element should be an associative array
-
-//quotes to inspire the budding developer at difficult times
+// Created multi-dimensional array following steps in Treehouse
+// Used PHP 5.4 [] syntax for mutli-dimensional arrays
 $quotes[] = [
      'quote' => 'To realize one\'s destiny is a person\'s only obligation.',
      'source' => 'Paolo Coelho',
@@ -46,24 +44,9 @@ $quotes[] = [
      'year' => '1957',
 ];
 
-//testing random array index
-/*
-$randomIndex = array_rand($quotes);
-$randomNumber = $quotes[$randomIndex];
-echo $randomNumber;
-*/
-
-
-// Create the getRandomQuote function and name it getRandomQuote
-
-//testing getRandomQuote function (long version)
-/*
-function getRandomQuote($quotes) {
-    $randIndex = array_rand($quotes);
-    $randElement = $quotes[$randIndex];
-    return $randElement;
-};
-*/
+//Created getRandomQuote() function to randomize quotes from multi-dimensional array
+//Referenced guide on "Getting a random element from an array"
+//Guide by zgulde on GitHubGist: https://gist.github.com/zgulde/9ca9e46d87085e471039
 
 function getRandomQuote($quotes) {
     $randomQuote = $quotes[array_rand($quotes)];
@@ -71,7 +54,10 @@ function getRandomQuote($quotes) {
 
 };
 
-// Create the printQuote funtion and name it printQuote
+//Created printQuote() function to format quotes
+//Empty string variable created to store formatted string
+//used conditionals (if statements) to format strings
+
 function printQuote($quotes) {
     $quote = getRandomQuote($quotes);
     $htmlString = "";

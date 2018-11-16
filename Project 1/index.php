@@ -11,7 +11,6 @@
   <div class="container">
     <div id="quote-box">
       <p class="quote"><?php include 'inc/functions.php';?> </p>
-
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>

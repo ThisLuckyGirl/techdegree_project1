@@ -69,12 +69,11 @@ function printQuote($quotes) {
     if (!empty($quote['citation'])){
       $htmlString = "<p class=\"quote\">" . $quote['quote'] . "</p>" .
       "<p class=\"source\">" . $quote['source'] . "<span class=\"citation\">" .
-      $quote['citation'] . "</span></p>";
+      $quote['citation'] . "</span>";
     };
     if (!empty($quote['year'])){
       $htmlString = "<p class=\"quote\">" . $quote['quote'] . "</p>" .
-      "<p class=\"source\">" . $quote['source'] . "<span class=\"citation\">" .
-      $quote['citation'] . "</span>" . "<span class=\"year\">" . $quote['year'] .
+      "<p class=\"source\">" . $quote['source'] . "<span class=\"year\">" . $quote['year'] .
       "</span></p>";
     };
 
@@ -82,5 +81,7 @@ function printQuote($quotes) {
 };
 
 printQuote($quotes);
+
+
 
 ?>
